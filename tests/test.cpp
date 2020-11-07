@@ -15,4 +15,4 @@ TEST(Example, RectanglePerimeter) {
     EXPECT_EQ(test->perimeter(), 64);
 }
 
-#endif //__RAND_TEST_HPP__
+#endif //__TEST_CPP__
