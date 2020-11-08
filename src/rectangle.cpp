@@ -3,22 +3,26 @@
 
 class Rectangle {
     public:
-	int length;
-	int width;
+	int len;
+	int wid;
         Rectangle(int l, int w) {
-		//if(l < w){
-		//    temp = w;
-		//    w = l;
-		//    l = temp;
+		len=l; wid=w;
+		//if(len<0){len=0-len;}
+		//if(wid<0){wid=0-wid;}
+		//if(len<wid){
+		//	int temp = len;
+		//	len = wid;
+		//	wid = temp;
 		//}
-		length=l; width=w;
-		//if(length<0){length=0-length;}
-		//if(width<0){width=0-width;}
 	};
-	int length() { return length;}
-	int width() { return width;}
-        int area(){return length*width;}
-	int perimeter(){return (2*length)+(2*width);}
+	int length() { return len;}
+	int width() { return wid;}
+        int area(){return len*wid;}
+	int perimeter(){
+		if(len==0){return wid;}
+		else if(wid==0){return len;}
+		else{return (2*len)+(2*wid);}
+	}
 };
 
 #endif //__RECTANGLE_HPP__

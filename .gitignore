@@ -1,1 +1,9 @@
 example
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+lib/
+rectangle_calc
+test
+

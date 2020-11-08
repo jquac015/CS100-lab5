@@ -3,20 +3,25 @@
 
 #include "gtest/gtest.h"
 
-#include "src/rectangle.cpp"
+#include "../src/rectangle.cpp"
 
-TEST(ConstructorTest, Rectangle) {
+TEST(ConstructorTest, RectangleLenGEWid) {
     Rectangle* test = new Rectangle(10,5);
     EXPECT_EQ(test->width(), 5);
 }
 
-TEST(ConstructorTest, Rectangle) {
+TEST(ConstructorTest, RectangleWidGELen) {
     Rectangle* test = new Rectangle(5,10);
     EXPECT_EQ(test->length(), 10);
 }
 
-TEST(ConstructorTest, Rectangle) {
+TEST(ConstructorTest, RectangleNegLen) {
     Rectangle* test = new Rectangle(-10,5);
+    EXPECT_EQ(test->length(), 10);
+}
+
+TEST(ConstructorTest, RectangleNegWid) {
+    Rectangle* test = new Rectangle(10,-5);
     EXPECT_EQ(test->length(), 10);
 }
 
@@ -25,19 +30,19 @@ TEST(AreaTest, RectangleArea) {
     EXPECT_EQ(test->area(), 100);
 }
 
-TEST(AreaTest, RectangleArea) {
+TEST(AreaTest, RectangleAreaNegLen) {
     Rectangle* test = new Rectangle(-1,10);
     EXPECT_EQ(test->area(), 10);
 }
 
-TEST(AreaTest, RectangleArea) {
+TEST(AreaTest, RectangleAreaZeroWid) {
     Rectangle* test = new Rectangle(10,0);
     EXPECT_EQ(test->area(), 0);
 }
 
-TEST(AreaTest, RectangleArea) {
+TEST(AreaTest, RectangleAreaNegLW) {
     Rectangle* test = new Rectangle(-5,-7);
-    EXPECT_EQ(test->area(), 30);
+    EXPECT_EQ(test->area(), 35);
 }
 
 TEST(PeriTest, RectanglePerimeter) {
@@ -45,21 +50,25 @@ TEST(PeriTest, RectanglePerimeter) {
     EXPECT_EQ(test->perimeter(), 64);
 }
 
-TEST(PeriTest, RectanglePerimeter) {
+TEST(PeriTest, RectanglePerimeter2) {
     Rectangle* test = new Rectangle(12, 7);
-    EXPECT_EQ(test->perimeter(), 0);
+    EXPECT_EQ(test->perimeter(), 38);
 }
 
-TEST(PeriTest, RectanglePerimeter) {
+TEST(PeriTest, RectanglePerimeterZeroLen) {
     Rectangle* test = new Rectangle(0, 10);
-    EXPECT_EQ(test->perimeter(), 99);
+    EXPECT_EQ(test->perimeter(), 10);
 }
 
-TEST(PeriTest, RectanglePerimeter) {
+TEST(PeriTest, RectanglePerimeterNegLen) {
     Rectangle* test = new Rectangle(-5, 10);
     EXPECT_EQ(test->perimeter(), 30);
 }
 
+int main(int argc, char **argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
 
 
 #endif //__TEST_CPP__
