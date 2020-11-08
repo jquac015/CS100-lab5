@@ -6,14 +6,15 @@ class Rectangle {
 	int len;
 	int wid;
         Rectangle(int l, int w) {
-		len=l; wid=w;
-		if(len<0){len=0-len;}
-		if(wid<0){wid=0-wid;}
-		if(len<wid){
-			int temp = len;
-			len = wid;
-			wid = temp;
-		}
+		//len=l; wid=w;
+		//if(len<0){len=0-len;}
+		//if(wid<0){wid=0-wid;}
+		//if(len<wid){
+		//	int temp = len;
+		//	len = wid;
+		//	wid = temp;
+		//}
+		return 20;
 	};
 	int length() { return len;}
 	int width() { return wid;}
