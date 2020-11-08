@@ -14,7 +14,7 @@ class Rectangle {
 		//	len = wid;
 		//	wid = temp;
 		//}
-		return 20;
+		return 21;
 	};
 	int length() { return len;}
 	int width() { return wid;}
