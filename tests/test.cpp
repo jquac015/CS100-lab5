@@ -37,7 +37,7 @@ TEST(AreaTest, RectangleArea) {
 
 TEST(AreaTest, RectangleArea) {
     Rectangle* test = new Rectangle(-5,-7);
-    EXPECT_EQ(test->area(), 35);
+    EXPECT_EQ(test->area(), 30);
 }
 
 TEST(PeriTest, RectanglePerimeter) {
@@ -47,12 +47,12 @@ TEST(PeriTest, RectanglePerimeter) {
 
 TEST(PeriTest, RectanglePerimeter) {
     Rectangle* test = new Rectangle(12, 7);
-    EXPECT_EQ(test->perimeter(), 38);
+    EXPECT_EQ(test->perimeter(), 0);
 }
 
 TEST(PeriTest, RectanglePerimeter) {
     Rectangle* test = new Rectangle(0, 10);
-    EXPECT_EQ(test->perimeter(), 20);
+    EXPECT_EQ(test->perimeter(), 99);
 }
 
 TEST(PeriTest, RectanglePerimeter) {
