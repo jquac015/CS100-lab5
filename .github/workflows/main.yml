@@ -25,13 +25,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run main
         run: |
-          cmake3 .
+          cmake .
           make
-          ./example
+          ./rectangle_calc
 
       # Runs a set of commands using the runners shell
       - name: Run tests
         run: |
-          cmake3 .
+          cmake .
           make
           ./test
