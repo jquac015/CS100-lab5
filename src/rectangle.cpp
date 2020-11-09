@@ -6,7 +6,7 @@ class Rectangle {
 	int len;
 	int wid;
         Rectangle(int l, int w) {
-		//return 21;
+		//return 20;
 		len=l; wid=w;
 		if(len<0){len=0-len;}
 		if(wid<0){wid=0-wid;}
