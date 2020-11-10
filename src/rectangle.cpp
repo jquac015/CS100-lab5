@@ -13,7 +13,7 @@ class Rectangle {
 			int temp = len;
 			len = wid;
 			wid = temp;
-		/}
+		}
 	};
 	int length() { return len;}
 	int width() { return wid;}
