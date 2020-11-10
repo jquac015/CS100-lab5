@@ -6,7 +6,7 @@ name: CI
 # events but only for the main branch
 on:
   push:
-    branches: [ jquac015/fail_test,jquac015/pass_test ]
+    branches: [ jquac015/failing,jquac015/passing ]
   pull_request:
     branches: [ main ]
 
