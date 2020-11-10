@@ -7,9 +7,9 @@ class Rectangle {
 	int wid;
         Rectangle(int l, int w) {
 		len=l; wid=w;
-		//if(len<0){len=0-len;}
-		//if(wid<0){wid=0-wid;}
-		//if(len<wid){
+		//if(len<0) {len=0-len;}
+		//if(wid<0) {wid=0-wid;}
+		//if(len<wid) {
 		//	int temp = len;
 		//	len = wid;
 		//	wid = temp;
